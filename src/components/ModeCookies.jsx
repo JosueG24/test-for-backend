@@ -15,7 +15,7 @@ export default function ModeCookies({url}) {
     }
     async function handleSubmit2(e){
         e.preventDefault()
-        const response = await axios.get(url+e.target.url.value, {withCredentials:true})
+        const response = await axios.get(url+e.target.urlInp.value, {withCredentials:true})
         console.log(response)
     }
 
