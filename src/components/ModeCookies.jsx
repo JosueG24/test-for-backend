@@ -6,11 +6,11 @@ export default function ModeCookies({url}) {
     async function handleSubmit(e){
         e.preventDefault()
         console.log({url:e.target.urlInp.value ,name:e.target.cookieNameInp.value, content:e.target.cookieContentInp.value, domain:e.target.domainInp.value})
-        const response = await axios.post(url+e.target.url.value, {withCredentials:true},{
+        const response = await axios.post(url+e.target.urlInp.value, {withCredentials:true},{
             name:e.target.cookieNameInp.value,
             content:e.target.cookieContentInp.value, 
             domain:e.target.domainInp.value})
-        console.log({url:url+e.target.url.value, response})
+        console.log({url:url+e.target.urlInp.value, response})
 
     }
     async function handleSubmit2(e){
